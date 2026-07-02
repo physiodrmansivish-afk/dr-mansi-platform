@@ -1,0 +1,281 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "areas": "Areas We Serve",
+    "book": "Book Appointment",
+    "contact": "Contact",
+    "languageToggle": "MR",
+    "currentLang": "EN"
+  },
+  "home": {
+    "hero": {
+      "badge": "Dr. Mansi Vishwakarma (BPT, MPT Ortho)",
+      "titleLine1": "Healing at",
+      "titleLine2": "Your Doorstep",
+      "subtitle": "Expert Physiotherapy, Right at Your Home",
+      "description": "Recover in the comfort of your familiar surroundings. Personalized orthopedic rehabilitation and pain management designed around your lifestyle.",
+      "ctaPrimary": "Book an Appointment",
+      "ctaSecondary": "Our Services",
+      "trustBadge": "Trusted by 500+ Patients"
+    },
+    "services": {
+      "title": "Our Services",
+      "items": {
+        "ortho": {
+          "title": "Orthopaedic Physiotherapy",
+          "description": "Comprehensive care for bone and joint conditions, focusing on pain relief and mobility."
+        },
+        "postSurgery": {
+          "title": "Post-Surgery Rehabilitation",
+          "description": "Specialized recovery programs to help you regain strength and function after surgical procedures."
+        },
+        "sports": {
+          "title": "Sports Injury Treatment",
+          "description": "Expert assessment and treatment for sports-related injuries to get you back to your peak performance."
+        }
+      },
+      "learnMore": "Learn More"
+    },
+    "whyChoose": {
+      "title": "Why Choose Us",
+      "items": {
+        "homeVisits": {
+          "title": "Home Visits",
+          "description": "Professional care delivered in the comfort of your home."
+        },
+        "certified": {
+          "title": "Certified Specialist",
+          "description": "BPT, MPT (Ortho) qualified expert with years of experience."
+        },
+        "flexible": {
+          "title": "Flexible Scheduling",
+          "description": "Book appointments at times that suit your busy lifestyle."
+        },
+        "personalized": {
+          "title": "Personalized Treatment Plans",
+          "description": "Customized recovery paths tailored to your specific needs."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What Patients Say",
+      "items": {
+        "testimonial1": {
+          "quote": "Dr. Mansi's home visits were a godsend after my knee surgery. Her personalized approach helped me walk again sooner than expected.",
+          "name": "Rajesh M."
+        },
+        "testimonial2": {
+          "quote": "Highly professional and knowledgeable. The convenience of home therapy combined with her expertise in orthopaedics is unmatched.",
+          "name": "Sunita K."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Recovery?",
+      "subtitle": "Book your appointment today and take the first step towards a pain-free life.",
+      "button": "Book Now"
+    }
+  },
+  "footer": {
+    "brandName": "Dr. Mansi Vishwakarma",
+    "qualification1": "BPT, MPT Ortho",
+    "qualification2": "Physiotherapist",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "phone": "+91 98765 43210",
+    "email": "contact@physiocare.com",
+    "whatsapp": "WhatsApp Us",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© {year} PhysioCare. All rights reserved."
+  },
+  "about": {
+    "heroTitle": "Dedicated to Your Mobility",
+    "heroSubtitle": "Empowering patients through expert orthopedic care in the sanctity of their homes.",
+    "sectionTitle": "About Dr. Mansi",
+    "bio1": "Dr. Mansi Vishwakarma is a highly skilled Consultant Physiotherapist with a deep specialization in Orthopedic rehabilitation. With a Master's degree in Orthopedic Physiotherapy (MPT Ortho), she has dedicated her career to understanding the intricacies of musculoskeletal disorders and developing innovative treatment protocols that prioritize long-term mobility and pain management.",
+    "bio2": "Her patient-centric philosophy is rooted in the belief that effective healing happens best in a stress-free environment. By bringing clinical-grade expertise directly to her patients' homes, Dr. Mansi ensures that specialized care is accessible, personalized, and integrated into the daily lives of those she treats. Her approach combines manual therapy, advanced exercise science, and empathetic counseling to achieve optimal recovery outcomes.",
+    "qualBpt": "BPT",
+    "qualMpt": "MPT (Ortho)",
+    "qualConsultant": "Consultant Physiotherapist",
+    "statPatients": "500+",
+    "statPatientsLabel": "Patients Treated",
+    "statExperience": "8+ Years",
+    "statExperienceLabel": "Experience",
+    "statHomeVisit": "Home Visit",
+    "statHomeVisitLabel": "Specialist",
+    "ctaTitle": "Start Your Recovery Journey",
+    "ctaSubtitle": "Book a personalized home consultation with Dr. Mansi today.",
+    "ctaButton": "Book Appointment"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Personalized home-visit physiotherapy treatments designed to restore your mobility and improve your quality of life.",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "ctaTitle": "Ready to start your recovery journey?",
+    "ctaSubtitle": "Book a home-visit consultation today and receive professional physiotherapy care in the comfort of your own home.",
+    "scheduleAppt": "Schedule an Appointment",
+    "contactWhatsapp": "Contact via WhatsApp",
+    "items": {
+      "ortho": {
+        "title": "Orthopaedic Physiotherapy",
+        "description": "Expert care for bone and joint conditions, focusing on pain relief and mobility improvement through evidence-based...",
+        "price": "Starting from ₹800 per session"
+      },
+      "postSurgery": {
+        "title": "Post-Surgery Rehabilitation",
+        "description": "Specialized recovery programs to help you regain strength, flexibility, and full function after surgical procedures and...",
+        "price": "Starting from ₹1000 per session"
+      },
+      "sports": {
+        "title": "Sports Injury Treatment",
+        "description": "Expert assessment and treatment for sports-related injuries to get you back to your peak performance safely and...",
+        "price": "Starting from ₹900 per session"
+      },
+      "neuro": {
+        "title": "Neurological Physiotherapy",
+        "description": "Dedicated care for conditions like stroke, Parkinson's, or multiple sclerosis to improve motor functions and neurologic...",
+        "price": "Starting from ₹1100 per session"
+      },
+      "elderly": {
+        "title": "Elderly Care & Mobility",
+        "description": "Gentle, home-based therapy designed to improve balance, strength, and independence for seniors in a...",
+        "price": "Starting from ₹850 per session"
+      },
+      "chronic": {
+        "title": "Chronic Pain Management",
+        "description": "Integrated approaches to manage long-term pain through manual therapy, exercise science, and educational patie...",
+        "price": "Starting from ₹950 per session"
+      }
+    }
+  },
+  "areas": {
+    "title": "Areas We Serve",
+    "subtitle": "We provide professional home-visit physiotherapy services across Nagpur. Please note that home visits are currently provided only in the listed areas.",
+    "allNagpur": "Nagpur (All Areas)",
+    "localities": {
+      "dharampeth": "Dharampeth",
+      "sitabuldi": "Sitabuldi",
+      "ramdaspeth": "Ramdaspeth",
+      "civilLines": "Civil Lines",
+      "bajajNagar": "Bajaj Nagar",
+      "pratapNagar": "Pratap Nagar",
+      "manishNagar": "Manish Nagar",
+      "shankarNagar": "Shankar Nagar",
+      "hingna": "Hingna",
+      "wardhaRoad": "Wardha Road",
+      "katolRoad": "Katol Road",
+      "amravatiRoad": "Amravati Road"
+    },
+    "notListed": "Don't see your area? Contact us — we may still be able to help.",
+    "bookNow": "Book a Consultation"
+  },
+  "booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Complete your booking in 4 simple steps.",
+    "steps": {
+      "step1": "Service & Area",
+      "step2": "Select Slot",
+      "step3": "Your Details",
+      "step4": "Confirm"
+    },
+    "form": {
+      "service": "Select Service Type",
+      "area": "Select Area / Locality",
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "address": "Your Address (Flat/House No, Building, Street)",
+      "notes": "Additional Notes (Optional)"
+    },
+    "validation": {
+      "serviceRequired": "Please select a service.",
+      "areaRequired": "Please select an area.",
+      "dateRequired": "Please select a date.",
+      "timeRequired": "Please select a time slot.",
+      "nameRequired": "Full name is required.",
+      "phoneRequired": "Phone number is required.",
+      "phoneInvalid": "Please enter a valid 10-digit phone number.",
+      "addressRequired": "Address is required."
+    },
+    "actions": {
+      "next": "Continue",
+      "back": "Back",
+      "payNow": "Pay Now (Paytm)",
+      "payAtVisit": "Pay at Visit",
+      "confirm": "Confirm Booking"
+    },
+    "summary": {
+      "title": "Final Confirmation",
+      "subtitle": "Please review your appointment details before proceeding.",
+      "boxTitle": "Booking Summary",
+      "patientName": "PATIENT NAME",
+      "phone": "PHONE NUMBER",
+      "dateTime": "DATE & TIME",
+      "service": "SERVICE",
+      "address": "ADDRESS",
+      "fee": "Consultation Fee",
+      "whatsappNote": "You will receive a WhatsApp confirmation after booking."
+    },
+    "success": {
+      "title": "Appointment Confirmed!",
+      "refId": "REF ID",
+      "date": "Date",
+      "time": "Time",
+      "service": "Service",
+      "physiotherapist": "Physiotherapist",
+      "drName": "Dr. Mansi Vishwakarma",
+      "homeVisit": "Home Visit - Professional Setup",
+      "backToHome": "Back to Home",
+      "addToCalendar": "Add to Calendar",
+      "whatsappSent": "A confirmation has been sent to your WhatsApp"
+    },
+    "noSlots": "No available slots for this date.",
+    "selectDateFirst": "Select an Available Time"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for any queries.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Working Hours",
+    "form": {
+      "name": "Your Name",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "success": "Your message has been sent successfully!"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "back": "Back",
+    "next": "Next",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "search": "Search",
+    "noResults": "No results found.",
+    "required": "Required",
+    "optional": "Optional",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "workingHours": "Mon - Sat, 9:00 AM - 6:00 PM",
+    "copyright": "© {year} Dr. Mansi Vishwakarma. All rights reserved."
+  }
+}

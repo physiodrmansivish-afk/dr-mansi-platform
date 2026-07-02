@@ -1,0 +1,62 @@
+{
+  "workingHours": {
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "slotDuration": 60
+  },
+  "serviceAreas": [
+    "Nagpur",
+    "Dharampeth",
+    "Sitabuldi",
+    "Ramdaspeth",
+    "Civil Lines",
+    "Bajaj Nagar",
+    "Pratap Nagar",
+    "Manish Nagar",
+    "Shankar Nagar",
+    "Hingna",
+    "Wardha Road",
+    "Katol Road",
+    "Amravati Road"
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Initial Assessment",
+      "description": "Comprehensive physical evaluation and personalized treatment plan",
+      "duration": 60,
+      "price": 800
+    },
+    {
+      "id": "2",
+      "name": "Standard Session",
+      "description": "Regular physiotherapy treatment (Manual therapy, exercises)",
+      "duration": 45,
+      "price": 600
+    },
+    {
+      "id": "3",
+      "name": "Post-Op Rehab",
+      "description": "Specialized rehabilitation for post-surgical recovery",
+      "duration": 60,
+      "price": 1000
+    }
+  ],
+  "clinicInfo": {
+    "name": "Dr. Mansi Vishwakarma Physiotherapy",
+    "phone": "+91 98765 43210",
+    "whatsappNumber": "+91 98765 43210",
+    "address": "123 Health Ave, Ramdaspeth, Nagpur, Maharashtra 440010"
+  },
+  "whatsappTemplates": [
+    {
+      "name": "booking_confirmation",
+      "description": "Sent to patient when they book an appointment."
+    },
+    {
+      "name": "appointment_rescheduled",
+      "description": "Sent to patient when doctor reschedules."
+    }
+  ]
+}

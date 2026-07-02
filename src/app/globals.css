@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Brand Colors (extracted from design) ── */
+  --color-primary: #0D7377;
+  --color-primary-hover: #0A5F62;
+  --color-primary-light: #E6F4F4;
+  --color-primary-lightest: #F0F9F9;
+
+  /* ── Surface & Background ── */
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F8FAFA;
+  --color-surface-dark: #0B4F52;
+  --color-surface-darker: #083B3E;
+
+  /* ── Text ── */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-text-muted: #6B7280;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: #B8D8D9;
+
+  /* ── Border ── */
+  --color-border: #E5E7EB;
+  --color-border-light: #F0F0F0;
+
+  /* ── Status ── */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px 0 rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --shadow-nav: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-badge: 20px;
+  --radius-full: 9999px;
+}
+
+/* ── Global Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  line-height: 1.6;
+}
+
+/* ── Smooth transitions for interactive elements ── */
+a,
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* ── Focus visible for accessibility ── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
