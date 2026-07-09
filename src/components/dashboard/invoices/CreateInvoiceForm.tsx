@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react';
 import { Plus, Trash2, Calendar, FileText, Loader2, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { createInvoice } from '@/app/dashboard/invoices/actions';
 import { format } from 'date-fns';
 
 interface PatientOption {
@@ -94,14 +93,11 @@ export default function CreateInvoiceForm({ patients }: CreateInvoiceFormProps) 
       notes
     };
 
-    const res = await createInvoice(data);
-    if (res.error) {
-      setError(res.error);
-      setIsSubmitting(false);
-    } else {
+    // Mock success
+    setTimeout(() => {
       router.push('/dashboard/invoices');
       router.refresh();
-    }
+    }, 500);
   };
 
   return (

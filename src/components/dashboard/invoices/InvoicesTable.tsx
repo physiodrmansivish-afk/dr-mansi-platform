@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Eye, CheckCircle, Download, Bell, X, FileText, Loader2, IndianRupee } from 'lucide-react';
 import { format, parse } from 'date-fns';
-import { markInvoicePaid } from '@/app/dashboard/invoices/actions';
 
 interface LineItem {
   description: string;
@@ -46,9 +45,10 @@ export default function InvoicesTable({ invoices }: InvoicesTableProps) {
     if (!payingInvoice) return;
     
     setIsSubmitting(true);
-    await markInvoicePaid(payingInvoice.id, payingInvoice.total, payMethod, payReference, payingInvoice.appointment_id || undefined);
-    setIsSubmitting(false);
-    setPayingInvoice(null);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setPayingInvoice(null);
+    }, 500);
   };
 
   return (

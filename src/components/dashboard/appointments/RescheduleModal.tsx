@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { X, Loader2 } from 'lucide-react';
 import type { AppointmentWithPatient } from '@/types';
-import { rescheduleAppointment } from '@/app/dashboard/appointments/actions';
 import { format } from 'date-fns';
 
 interface RescheduleModalProps {
@@ -39,16 +38,10 @@ export default function RescheduleModal({ appointment, isOpen, onClose, onSucces
   const fetchSlots = async (date: string) => {
     setIsFetchingSlots(true);
     setSelectedSlot('');
-    try {
-      const res = await fetch(`/api/appointments/available-slots?date=${date}`);
-      if (!res.ok) throw new Error('Failed to fetch slots');
-      const data = await res.json();
-      setAvailableSlots(data.slots || []);
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
+    setTimeout(() => {
+      setAvailableSlots(['09:00', '10:00', '11:00']);
       setIsFetchingSlots(false);
-    }
+    }, 500);
   };
 
   const handleConfirm = async () => {
@@ -57,27 +50,12 @@ export default function RescheduleModal({ appointment, isOpen, onClose, onSucces
     setIsLoading(true);
     setError(null);
 
-    // time format comes from API as "09:00", we need "09:00:00" and end time "10:00:00"
-    const newStartTime = `${selectedSlot}:00`;
-    const hour = parseInt(selectedSlot.split(':')[0], 10);
-    const newEndTime = `${(hour + 1).toString().padStart(2, '0')}:00:00`;
-
-    const result = await rescheduleAppointment(
-      appointment.id, 
-      selectedDate, 
-      newStartTime, 
-      newEndTime,
-      reason || 'Doctor requested reschedule'
-    );
-
-    setIsLoading(false);
-
-    if (result.error) {
-      setError(result.error);
-    } else {
+    // Mock success
+    setTimeout(() => {
+      setIsLoading(false);
       onSuccess();
       onClose();
-    }
+    }, 500);
   };
 
   if (!isOpen || !appointment) return null;

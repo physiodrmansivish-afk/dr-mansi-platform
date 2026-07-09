@@ -1,27 +1,23 @@
 'use client';
 
 import { useState } from 'react';
-import { login } from './actions';
 import { Loader2 } from 'lucide-react';
-import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
   const [error, setError] = useState<string | null>(null);
   const [isPending, setIsPending] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsPending(true);
     setError(null);
     
-    const formData = new FormData(e.currentTarget);
-    const result = await login(formData);
-    
-    if (result?.error) {
-      setError(result.error);
-      setIsPending(false);
-    }
-    // if successful, login action will redirect
+    // Simulate login for UI demonstration
+    setTimeout(() => {
+      router.push('/dashboard');
+    }, 1000);
   };
 
   return (

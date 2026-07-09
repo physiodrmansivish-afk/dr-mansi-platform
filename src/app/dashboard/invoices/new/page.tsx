@@ -1,21 +1,8 @@
-import { createAdminClient } from '@/lib/supabase/server';
 import CreateInvoiceForm from '@/components/dashboard/invoices/CreateInvoiceForm';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 
-export default async function NewInvoicePage() {
-  const supabase = await createAdminClient();
-
-  // Fetch patients for the dropdown
-  const { data: patients, error } = await supabase
-    .from('patients')
-    .select('id, full_name, phone')
-    .order('full_name', { ascending: true });
-
-  if (error) {
-    console.error('Failed to fetch patients for new invoice:', error);
-  }
-
+export default function NewInvoicePage() {
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div>
@@ -33,7 +20,7 @@ export default async function NewInvoicePage() {
         <p className="text-sm text-text-muted mt-1">Draft a new invoice and assign it to a patient.</p>
       </div>
 
-      <CreateInvoiceForm patients={patients || []} />
+      <CreateInvoiceForm patients={[]} />
     </div>
   );
 }

@@ -7,7 +7,6 @@ import AppointmentsList from './AppointmentsList';
 import AppointmentsCalendar from './AppointmentsCalendar';
 import RescheduleModal from './RescheduleModal';
 import AppointmentDetailsDrawer from './AppointmentDetailsDrawer';
-import { updateAppointmentStatus } from '@/app/dashboard/appointments/actions';
 
 interface AppointmentsModuleProps {
   initialAppointments: AppointmentWithPatient[];
@@ -44,13 +43,13 @@ export default function AppointmentsModule({ initialAppointments }: Appointments
 
   const handleCancel = async (appt: AppointmentWithPatient) => {
     if (confirm(`Are you sure you want to cancel the appointment for ${appt.patient.full_name}?`)) {
-      await updateAppointmentStatus(appt.id, 'cancelled');
+      console.log('Cancelled mock');
     }
   };
 
   const handleMarkComplete = async (appt: AppointmentWithPatient) => {
     if (confirm(`Mark appointment for ${appt.patient.full_name} as completed?`)) {
-      await updateAppointmentStatus(appt.id, 'completed');
+      console.log('Completed mock');
     }
   };
 

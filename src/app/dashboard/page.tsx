@@ -1,23 +1,18 @@
-import { createAdminClient } from '@/lib/supabase/server';
-import { 
-  getDashboardMetrics, 
-  getUpcomingAppointments, 
-  getRecentActivity 
-} from '@/lib/supabase/queries';
 import CountUp from '@/components/dashboard/CountUp';
 import RevenueChart from '@/components/dashboard/RevenueChart';
 import { Calendar as CalendarIcon, ClipboardList, Receipt, Users, ArrowRight, ArrowUpRight, CheckCircle2, Clock, XCircle, FileText, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { format, parse } from 'date-fns';
 
-export default async function DashboardOverview() {
-  const supabase = await createAdminClient();
-  
-  const [metrics, upcomingAppointments, recentActivity] = await Promise.all([
-    getDashboardMetrics(supabase),
-    getUpcomingAppointments(supabase, 5),
-    getRecentActivity(supabase, 5)
-  ]);
+export default function DashboardOverview() {
+  const metrics = {
+    todayAppointments: 0,
+    pendingPayments: 0,
+    totalPatients: 0,
+    thisMonthRevenue: 0
+  };
+  const upcomingAppointments: any[] = [];
+  const recentActivity: any[] = [];
 
   return (
     <div className="space-y-6">
