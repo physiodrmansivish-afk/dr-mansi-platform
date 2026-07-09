@@ -241,6 +241,16 @@ CREATE POLICY "Public can insert whatsapp_logs"
 
 
 -- ============================================================
+-- MIGRATION 004: Add age and sex columns to patients
+-- Date: 2026-07-09
+-- Description: Support new inquiry form fields (age, sex).
+-- ============================================================
+
+ALTER TABLE patients ADD COLUMN IF NOT EXISTS age integer;
+ALTER TABLE patients ADD COLUMN IF NOT EXISTS sex text;  -- male | female | other
+
+
+-- ============================================================
 -- END OF MIGRATIONS
 -- ============================================================
 -- When adding new migrations, append them below with:
@@ -248,3 +258,4 @@ CREATE POLICY "Public can insert whatsapp_logs"
 --   -- Date: YYYY-MM-DD
 --   -- Description: What this migration does.
 -- ============================================================
+

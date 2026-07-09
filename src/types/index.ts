@@ -53,13 +53,18 @@ export interface Patient {
   alternate_phone: string | null;
   address: string | null;
   area: string;
+  age: number | null;
+  sex: string | null;
   language_preference: Locale;
   notes: string | null;
   created_at: string;
 }
 
-export type PatientInsert = Omit<Patient, 'id' | 'created_at'>;
-export type PatientUpdate = Partial<PatientInsert>;
+export type PatientInsert = Omit<Patient, 'id' | 'created_at' | 'age' | 'sex'> & {
+  age?: number | null;
+  sex?: string | null;
+};
+export type PatientUpdate = Partial<Omit<Patient, 'id' | 'created_at'>>;
 
 // ---------------------------------------------------------------------------
 // Table: appointments

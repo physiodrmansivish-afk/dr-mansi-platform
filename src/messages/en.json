@@ -173,66 +173,42 @@
     "bookNow": "Book a Consultation"
   },
   "booking": {
-    "title": "Book an Appointment",
-    "subtitle": "Complete your booking in 4 simple steps.",
-    "steps": {
-      "step1": "Service & Area",
-      "step2": "Select Slot",
-      "step3": "Your Details",
-      "step4": "Confirm"
-    },
+    "title": "Request an Appointment",
+    "subtitle": "Fill in your details and we'll get back to you shortly.",
     "form": {
-      "service": "Select Service Type",
-      "area": "Select Area / Locality",
+      "service": "Type of Assistance Required",
+      "area": "Your Locality / Area",
       "fullName": "Full Name",
+      "age": "Age",
+      "sex": "Sex",
+      "sexOptions": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
       "phone": "Phone Number",
       "address": "Your Address (Flat/House No, Building, Street)",
-      "notes": "Additional Notes (Optional)"
+      "notes": "Describe your condition or concern (Optional)",
+      "submit": "Submit Request",
+      "submitting": "Submitting..."
     },
     "validation": {
       "serviceRequired": "Please select a service.",
       "areaRequired": "Please select an area.",
-      "dateRequired": "Please select a date.",
-      "timeRequired": "Please select a time slot.",
       "nameRequired": "Full name is required.",
+      "ageRequired": "Age is required.",
+      "ageInvalid": "Please enter a valid age.",
+      "sexRequired": "Please select your sex.",
       "phoneRequired": "Phone number is required.",
       "phoneInvalid": "Please enter a valid 10-digit phone number.",
       "addressRequired": "Address is required."
     },
-    "actions": {
-      "next": "Continue",
-      "back": "Back",
-      "payNow": "Pay Now (Paytm)",
-      "payAtVisit": "Pay at Visit",
-      "confirm": "Confirm Booking"
-    },
-    "summary": {
-      "title": "Final Confirmation",
-      "subtitle": "Please review your appointment details before proceeding.",
-      "boxTitle": "Booking Summary",
-      "patientName": "PATIENT NAME",
-      "phone": "PHONE NUMBER",
-      "dateTime": "DATE & TIME",
-      "service": "SERVICE",
-      "address": "ADDRESS",
-      "fee": "Consultation Fee",
-      "whatsappNote": "You will receive a WhatsApp confirmation after booking."
-    },
     "success": {
-      "title": "Appointment Confirmed!",
-      "refId": "REF ID",
-      "date": "Date",
-      "time": "Time",
-      "service": "Service",
-      "physiotherapist": "Physiotherapist",
-      "drName": "Dr. Mansi Vishwakarma",
-      "homeVisit": "Home Visit - Professional Setup",
-      "backToHome": "Back to Home",
-      "addToCalendar": "Add to Calendar",
-      "whatsappSent": "A confirmation has been sent to your WhatsApp"
-    },
-    "noSlots": "No available slots for this date.",
-    "selectDateFirst": "Select an Available Time"
+      "title": "Request Submitted Successfully!",
+      "subtitle": "Dr. Mansi will contact you shortly to confirm your appointment.",
+      "whatsappNote": "You may also receive a confirmation on WhatsApp.",
+      "backToHome": "Back to Home"
+    }
   },
   "contact": {
     "title": "Contact Us",
