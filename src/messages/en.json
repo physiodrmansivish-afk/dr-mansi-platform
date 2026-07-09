@@ -253,5 +253,21 @@
     "sunday": "Sunday",
     "workingHours": "Mon - Sat, 9:00 AM - 6:00 PM",
     "copyright": "© {year} Dr. Mansi Vishwakarma. All rights reserved."
+  },
+  "metadata": {
+    "defaultTitle": "Dr. Mansi Vishwakarma | Physiotherapist in Nagpur",
+    "titleTemplate": "%s | Dr. Mansi Vishwakarma",
+    "description": "Expert physiotherapy care at your doorstep in Nagpur. Personalized orthopedic rehabilitation and pain management by Dr. Mansi Vishwakarma, BPT, MPT (Ortho).",
+    "siteName": "Dr. Mansi Vishwakarma - PhysioCare",
+    "aboutTitle": "About Dr. Mansi",
+    "aboutDescription": "Learn more about Dr. Mansi Vishwakarma's expertise, qualifications, and patient-centric philosophy for orthopedic rehabilitation.",
+    "servicesTitle": "Physiotherapy Services",
+    "servicesDescription": "Explore our home-visit physiotherapy services including Orthopaedic, Post-Surgery Rehabilitation, Sports Injury Treatment, and more.",
+    "areasTitle": "Areas We Serve in Nagpur",
+    "areasDescription": "We provide professional home-visit physiotherapy services across various areas in Nagpur. Check if we cover your locality.",
+    "bookTitle": "Book an Appointment",
+    "bookDescription": "Request an appointment for home-visit physiotherapy with Dr. Mansi in Nagpur.",
+    "contactTitle": "Contact Us",
+    "contactDescription": "Get in touch with us for queries regarding our physiotherapy services in Nagpur."
   }
 }

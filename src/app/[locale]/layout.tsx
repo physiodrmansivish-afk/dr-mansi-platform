@@ -5,18 +5,41 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 
-export const metadata: Metadata = {
-  title: 'PhysioCare — Dr. Mansi Vishwakarma',
-  description:
-    'Expert physiotherapy care at your doorstep. Personalized orthopedic rehabilitation and pain management by Dr. Mansi Vishwakarma, BPT, MPT (Ortho).',
-};
+import { getTranslations } from 'next-intl/server';
+import { Analytics } from "@vercel/analytics/next";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
 
-import { Analytics } from "@vercel/analytics/next";
+export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://drmansivishwakarma.com';
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: t('defaultTitle'),
+      template: t('titleTemplate'),
+    },
+    description: t('description'),
+    openGraph: {
+      type: 'website',
+      locale: locale === 'en' ? 'en_IN' : 'mr_IN',
+      url: baseUrl,
+      siteName: t('siteName'),
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        mr: `${baseUrl}/mr`,
+      },
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -29,6 +52,25 @@ export default async function LocaleLayout({
   }
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://drmansivishwakarma.com';
+
+  // JSON-LD structured data for the clinic
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Physician',
+    name: 'Dr. Mansi Vishwakarma',
+    jobTitle: 'Physiotherapist',
+    medicalSpecialty: 'Orthopedic Physiotherapy',
+    description: 'Expert physiotherapy care at your doorstep. Personalized orthopedic rehabilitation and pain management.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Nagpur',
+      addressRegion: 'Maharashtra',
+      addressCountry: 'IN',
+    },
+    telephone: '+918318228028',
+    url: baseUrl,
+  };
 
   return (
     <html lang={locale}>
@@ -39,6 +81,10 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

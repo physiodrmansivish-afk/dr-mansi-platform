@@ -2,9 +2,24 @@ import { getTranslations } from 'next-intl/server';
 import { Phone, Mail, Award, Clock, MapPin, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import MediaBubble from '@/components/shared/MediaBubble';
+import { Metadata } from 'next';
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('contactTitle'),
+    description: t('contactDescription'),
+    openGraph: {
+      title: t('contactTitle'),
+      description: t('contactDescription'),
+    },
+  };
 }
 
 export default async function ContactPage(props: ContactPageProps) {
