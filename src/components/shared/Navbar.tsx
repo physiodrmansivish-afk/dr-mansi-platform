@@ -68,29 +68,29 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right side: Language toggle */}
-        <div className="hidden items-center gap-3 md:flex">
+        {/* Right side: Language toggle & Mobile menu */}
+        <div className="flex items-center gap-2 md:gap-3">
           <Link
             href={getLocaleSwitchHref()}
-            className="rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-text-secondary transition-colors hover:border-primary hover:text-primary"
+            className="rounded-md border border-border px-2 py-1.5 text-xs font-semibold text-text-secondary transition-colors hover:border-primary hover:text-primary md:px-3"
           >
             {t('currentLang')} / {t('languageToggle')}
           </Link>
-        </div>
 
-        {/* Mobile menu button */}
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-text-secondary md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </button>
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-1.5 text-text-secondary md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -111,15 +111,6 @@ export default function Navbar() {
                 {t(link.key)}
               </Link>
             ))}
-            <div className="border-t border-border pt-3">
-              <Link
-                href={getLocaleSwitchHref()}
-                className="block rounded-md px-3 py-2 text-sm font-semibold text-text-secondary hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t('currentLang')} / {t('languageToggle')}
-              </Link>
-            </div>
           </div>
         </div>
       )}
