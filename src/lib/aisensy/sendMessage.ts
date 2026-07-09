@@ -1,7 +1,5 @@
 import axios from 'axios';
 import { WhatsAppTemplate } from './templates';
-import { createAdminClient } from '@/lib/supabase/server';
-import { createWhatsAppLog } from '@/lib/supabase/queries';
 import { WhatsAppRecipientType, WhatsAppMessageType } from '@/types';
 
 interface SendWhatsAppParams {
@@ -44,37 +42,14 @@ export async function sendWhatsApp({
     );
 
     if (response.data && response.data.success) {
-      await logWhatsApp(cleanPhone, recipientType, messageType, templateName, 'sent');
+      console.log(`WhatsApp message sent successfully to ${cleanPhone}`);
       return true;
     } else {
       console.error('AiSensy API error response:', response.data);
-      await logWhatsApp(cleanPhone, recipientType, messageType, templateName, 'failed');
       return false;
     }
   } catch (error: any) {
     console.error('Error sending WhatsApp message:', error?.response?.data || error.message);
-    await logWhatsApp(cleanPhone, recipientType, messageType, templateName, 'failed');
     return false; // Fail gracefully so it doesn't break the booking flow
-  }
-}
-
-async function logWhatsApp(
-  phone: string,
-  recipientType: WhatsAppRecipientType,
-  messageType: WhatsAppMessageType,
-  templateName: string,
-  status: 'sent' | 'failed'
-) {
-  try {
-    const supabase = await createAdminClient();
-    await createWhatsAppLog(supabase, {
-      recipient_phone: phone,
-      recipient_type: recipientType,
-      message_type: messageType,
-      template_name: templateName,
-      status: status,
-    });
-  } catch (dbError) {
-    console.error('Failed to log WhatsApp message to database:', dbError);
   }
 }

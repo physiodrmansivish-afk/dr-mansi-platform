@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { createAdminClient } from '@/lib/supabase/server';
-import { getPatientByPhone, createPatient, updatePatient } from '@/lib/supabase/queries';
 import { sendWhatsApp } from '@/lib/aisensy/sendMessage';
 import { WHATSAPP_TEMPLATES } from '@/lib/aisensy/templates';
 
@@ -30,34 +28,8 @@ export async function POST(request: Request) {
     }
 
     const { fullName, age, sex, phone, area, service, address, notes } = validationResult.data;
-    const supabase = await createAdminClient();
 
-    // 2. Upsert patient record
-    let patientRecord = await getPatientByPhone(supabase, phone);
-    if (patientRecord) {
-      patientRecord = await updatePatient(supabase, patientRecord.id, {
-        full_name: fullName,
-        age,
-        sex,
-        address,
-        area,
-        notes: notes || null,
-      });
-    } else {
-      patientRecord = await createPatient(supabase, {
-        full_name: fullName,
-        phone,
-        alternate_phone: null,
-        address,
-        area,
-        age,
-        sex,
-        language_preference: 'en',
-        notes: notes || null,
-      });
-    }
-
-    // 3. Send WhatsApp to Dr. Mansi with patient details
+    // 2. Send WhatsApp to Dr. Mansi with patient details
     const doctorPhone = process.env.DOCTOR_WHATSAPP_NUMBER || '';
 
     if (doctorPhone) {
