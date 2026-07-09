@@ -15,7 +15,7 @@ export default async function ContactPage(props: ContactPageProps) {
   return (
     <main className="relative min-h-screen bg-surface pt-24 pb-16 overflow-hidden">
       {/* Background Bubbles (scattered) */}
-      <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden z-0">
+      <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden z-20">
         <div className="pointer-events-auto">
           <MediaBubble 
             src="/media/images/work-7.jpeg" 

@@ -7,7 +7,7 @@ export default function ServicesPage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background Bubbles (scattered) */}
-      <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden z-20">
         <div className="pointer-events-auto">
           <MediaBubble 
             src="/media/images/work-4.jpeg" 
