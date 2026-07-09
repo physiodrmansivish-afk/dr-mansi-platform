@@ -21,7 +21,7 @@ export default function AboutBio() {
             <div className="relative">
               <div className="h-56 w-56 overflow-hidden rounded-full border-4 border-primary-light sm:h-64 sm:w-64">
                 <Image
-                  src="/images/dr-mansi.png"
+                  src="/images/head-shot.jpeg"
                   alt="Dr. Mansi Vishwakarma"
                   width={256}
                   height={256}
