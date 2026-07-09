@@ -16,6 +16,8 @@ type LocaleLayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
+import { Analytics } from "@vercel/analytics/next";
+
 export default async function LocaleLayout({
   children,
   params,
@@ -36,6 +38,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
