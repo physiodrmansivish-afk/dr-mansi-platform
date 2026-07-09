@@ -5,7 +5,6 @@ import BookingSuccess from './BookingSuccess';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Loader2, Send, User, Phone, MapPin, Stethoscope, FileText } from 'lucide-react';
-import axios from 'axios';
 
 const serviceKeys = ['ortho', 'postSurgery', 'sports', 'neuro', 'elderly', 'chronic'];
 const areaKeys = [
@@ -32,30 +31,25 @@ export default function BookingForm() {
     setSubmitError('');
 
     try {
-      const payload = {
-        fullName: data.fullName,
-        age: data.age,
-        sex: data.sex,
-        phone: data.phone,
-        area: data.area,
-        service: data.service,
-        address: data.address,
-        notes: data.notes || '',
-      };
+      const message = `*New Booking Request*
+*Name:* ${data.fullName}
+*Age/Sex:* ${data.age} / ${data.sex}
+*Phone:* +91 ${data.phone}
+*Area:* ${t(`areas.localities.${data.area}`)}
+*Service:* ${t(`services.items.${data.service}.title`)}
+*Address:* ${data.address}
+*Notes:* ${data.notes || 'None'}
 
-      const response = await axios.post('/api/inquiries', payload);
+Please confirm my appointment.`;
 
-      if (response.data.success) {
-        setIsSubmitted(true);
-      } else {
-        setSubmitError(response.data.error || 'Something went wrong. Please try again.');
-      }
+      const whatsappUrl = `https://wa.me/918318228028?text=${encodeURIComponent(message)}`;
+      
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+      
+      setIsSubmitted(true);
     } catch (err: unknown) {
-      if (axios.isAxiosError(err) && err.response?.data?.error) {
-        setSubmitError(err.response.data.error);
-      } else {
-        setSubmitError('Something went wrong. Please try again.');
-      }
+      setSubmitError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
