@@ -29,7 +29,7 @@ export default async function ContactPage(props: ContactPageProps) {
             src="/media/images/work-8.jpeg" 
             type="image" 
             size={180} 
-            className="absolute bottom-32 left-20 opacity-70 hover:opacity-100"
+            className="absolute bottom-8 left-10 opacity-70 hover:opacity-100"
             delay={1.5}
             yOffset={18}
           />
