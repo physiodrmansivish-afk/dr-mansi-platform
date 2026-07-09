@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Phone, Mail, Award, Clock, MapPin, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import MediaBubble from '@/components/shared/MediaBubble';
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
@@ -12,7 +13,38 @@ export default async function ContactPage(props: ContactPageProps) {
   const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' });
 
   return (
-    <main className="min-h-screen bg-surface pt-24 pb-16">
+    <main className="relative min-h-screen bg-surface pt-24 pb-16 overflow-hidden">
+      {/* Background Bubbles (scattered) */}
+      <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden z-0">
+        <div className="pointer-events-auto">
+          <MediaBubble 
+            src="/media/images/work-7.jpeg" 
+            type="image" 
+            size={150} 
+            className="absolute top-48 left-10 opacity-70 hover:opacity-100"
+            delay={0.2}
+            yOffset={12}
+          />
+          <MediaBubble 
+            src="/media/images/work-8.jpeg" 
+            type="image" 
+            size={180} 
+            className="absolute bottom-32 left-20 opacity-70 hover:opacity-100"
+            delay={1.5}
+            yOffset={18}
+          />
+          <MediaBubble 
+            src="/media/videos/video-3.mp4" 
+            type="video" 
+            size={160} 
+            className="absolute top-80 right-10 opacity-70 hover:opacity-100"
+            delay={0.8}
+            yOffset={22}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10">
       {/* Hero Section */}
       <div className="bg-primary/5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
@@ -130,6 +162,7 @@ export default async function ContactPage(props: ContactPageProps) {
           </div>
 
         </div>
+      </div>
       </div>
     </main>
   );
