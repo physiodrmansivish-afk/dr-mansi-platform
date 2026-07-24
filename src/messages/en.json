@@ -11,14 +11,28 @@
   },
   "home": {
     "hero": {
-      "badge": "Dr. Mansi Vishwakarma (BPT, MPT Ortho)",
-      "titleLine1": "Healing at",
-      "titleLine2": "Your Doorstep",
-      "subtitle": "Expert Physiotherapy, Right at Your Home",
-      "description": "Recover in the comfort of your familiar surroundings. Personalized orthopedic rehabilitation and pain management designed around your lifestyle.",
+      "badge": "BPT, MPT (Ortho) — Consultant Physiotherapist",
+      "titleLine1": "Expert Care,",
+      "titleLine2": "Right at Your Home",
+      "subtitle": "Personalized Physiotherapy by Dr. Mansi Vishwakarma",
+      "description": "7+ years of specialized orthopedic rehabilitation. Recover in the comfort of your home with evidence-based treatment and compassionate care.",
       "ctaPrimary": "Book an Appointment",
-      "ctaSecondary": "Our Services",
+      "ctaSecondary": "Call on WhatsApp",
       "trustBadge": "Trusted by 500+ Patients"
+    },
+    "trustStats": {
+      "years": "7+",
+      "yearsLabel": "Years Experience",
+      "patients": "500+",
+      "patientsLabel": "Patients Treated",
+      "specialist": "Specialist",
+      "specialistLabel": "Spine & Knee Care",
+      "homeVisits": "Home Visits",
+      "homeVisitsLabel": "At Your Doorstep"
+    },
+    "workGallery": {
+      "title": "Our Work in Action",
+      "subtitle": "See how Dr. Mansi helps patients recover — real treatments, real results."
     },
     "services": {
       "title": "Our Services",
@@ -61,6 +75,7 @@
     },
     "testimonials": {
       "title": "What Patients Say",
+      "subtitle": "Hear directly from patients who trusted Dr. Mansi with their recovery.",
       "items": {
         "testimonial1": {
           "quote": "Dr. Mansi's home visits were a godsend after my knee surgery. Her personalized approach helped me walk again sooner than expected.",
@@ -75,7 +90,8 @@
     "cta": {
       "title": "Ready to Start Your Recovery?",
       "subtitle": "Book your appointment today and take the first step towards a pain-free life.",
-      "button": "Book Now"
+      "button": "Book Now",
+      "whatsapp": "Chat on WhatsApp"
     }
   },
   "footer": {
@@ -255,19 +271,19 @@
     "copyright": "© {year} Dr. Mansi Vishwakarma. All rights reserved."
   },
   "metadata": {
-    "defaultTitle": "Dr. Mansi Vishwakarma | Physiotherapist in Nagpur",
-    "titleTemplate": "%s | Dr. Mansi Vishwakarma",
-    "description": "Expert physiotherapy care at your doorstep in Nagpur. Personalized orthopedic rehabilitation and pain management by Dr. Mansi Vishwakarma, BPT, MPT (Ortho).",
+    "defaultTitle": "Dr. Mansi Vishwakarma | Physiotherapist in Mumbai",
+    "titleTemplate": "%s | Dr. Mansi Vishwakarma - Physiotherapist Mumbai",
+    "description": "Expert home-visit physiotherapy across Mumbai, Thane, and Diva. Personalized orthopedic rehabilitation, post-surgery recovery, sports injury treatment & pain management by Dr. Mansi Vishwakarma (BPT, MPT Ortho).",
     "siteName": "Dr. Mansi Vishwakarma - PhysioCare",
-    "aboutTitle": "About Dr. Mansi",
-    "aboutDescription": "Learn more about Dr. Mansi Vishwakarma's expertise, qualifications, and patient-centric philosophy for orthopedic rehabilitation.",
-    "servicesTitle": "Physiotherapy Services",
-    "servicesDescription": "Explore our home-visit physiotherapy services including Orthopaedic, Post-Surgery Rehabilitation, Sports Injury Treatment, and more.",
-    "areasTitle": "Areas We Serve in Nagpur",
-    "areasDescription": "We provide professional home-visit physiotherapy services across various areas in Nagpur. Check if we cover your locality.",
-    "bookTitle": "Book an Appointment",
-    "bookDescription": "Request an appointment for home-visit physiotherapy with Dr. Mansi in Nagpur.",
-    "contactTitle": "Contact Us",
-    "contactDescription": "Get in touch with us for queries regarding our physiotherapy services in Nagpur."
+    "aboutTitle": "About Dr. Mansi Vishwakarma | Physiotherapist in Mumbai",
+    "aboutDescription": "Dr. Mansi Vishwakarma — BPT, MPT (Ortho) qualified Consultant Physiotherapist serving Mumbai & Thane with 7+ years of experience in orthopedic rehabilitation, spine & knee care.",
+    "servicesTitle": "Physiotherapy Services in Mumbai & Thane",
+    "servicesDescription": "Home-visit physiotherapy services across Mumbai, Thane & Diva — Orthopaedic Physiotherapy, Post-Surgery Rehabilitation, Sports Injury Treatment, Neurological Physiotherapy, Elderly Care & Chronic Pain Management.",
+    "areasTitle": "Areas We Serve — Mumbai, Thane, Kalyan, Dombivli & Diva",
+    "areasDescription": "Professional home-visit physiotherapy services across Mumbai, Thane, Kalyan, Dombivli, Diva, and surrounding areas. Check if we cover your locality.",
+    "bookTitle": "Book Physiotherapy Appointment in Mumbai",
+    "bookDescription": "Request a home-visit physiotherapy appointment with Dr. Mansi Vishwakarma in Mumbai, Thane, and Diva. Orthopaedic care, post-surgery rehab & pain management.",
+    "contactTitle": "Contact Dr. Mansi Vishwakarma — Physiotherapist Mumbai",
+    "contactDescription": "Get in touch for physiotherapy services in Mumbai, Thane & Diva. Home-visit appointments, WhatsApp consultations, and queries about orthopaedic rehabilitation."
   }
 }

@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const DOMAIN = process.env.NEXT_PUBLIC_BASE_URL || 'https://drmansivishwakarma.com';
+const DOMAIN = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.physiomansi.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'mr'];

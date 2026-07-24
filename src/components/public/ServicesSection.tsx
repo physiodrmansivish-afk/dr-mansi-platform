@@ -14,7 +14,7 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-text-primary sm:text-3xl">
+          <h2 className="text-2xl font-bold text-text-primary sm:text-3xl lg:text-4xl">
             {t('title')}
           </h2>
           <div className="mx-auto mt-2 h-0.5 w-12 bg-primary" />
@@ -27,7 +27,7 @@ export default function ServicesSection() {
             return (
               <div
                 key={key}
-                className="group rounded-card border border-border bg-surface p-6 shadow-card transition-shadow hover:shadow-card-hover"
+                className="group rounded-card border border-border bg-surface p-6 sm:p-8 shadow-card transition-shadow hover:shadow-card-hover"
               >
                 {/* Icon */}
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary-light text-primary">
@@ -35,12 +35,12 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-2 text-base font-semibold text-text-primary">
+                <h3 className="mb-2 text-lg font-semibold text-text-primary">
                   {t(`items.${key}.title`)}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-4 text-sm leading-relaxed text-text-muted">
+                <p className="mb-4 text-base leading-relaxed text-text-muted">
                   {t(`items.${key}.description`)}
                 </p>
 

@@ -41,7 +41,7 @@ export default function ServicesGrid() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mb-4 text-sm leading-relaxed text-text-secondary">
+                  <p className="mb-4 text-base leading-relaxed text-text-secondary">
                     {t(`items.${key}.description`)}
                   </p>
                 </div>

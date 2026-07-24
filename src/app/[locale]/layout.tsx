@@ -16,7 +16,7 @@ type LocaleLayoutProps = {
 export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://drmansivishwakarma.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.physiomansi.com';
 
   return {
     metadataBase: new URL(baseUrl),
@@ -52,24 +52,46 @@ export default async function LocaleLayout({
   }
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://drmansivishwakarma.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.physiomansi.com';
 
-  // JSON-LD structured data for the clinic
+  // JSON-LD structured data for the clinic (local SEO)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Physician',
     name: 'Dr. Mansi Vishwakarma',
-    jobTitle: 'Physiotherapist',
+    jobTitle: 'Consultant Physiotherapist',
     medicalSpecialty: 'Orthopedic Physiotherapy',
-    description: 'Expert physiotherapy care at your doorstep. Personalized orthopedic rehabilitation and pain management.',
+    description: 'Expert physiotherapy care at your doorstep across Mumbai, Thane, and Diva. Personalized orthopedic rehabilitation, post-surgery recovery, and pain management by Dr. Mansi Vishwakarma (BPT, MPT Ortho).',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Nagpur',
+      streetAddress: 'Arjun Residency, D Wing 502, Sabegaon Road',
+      addressLocality: 'Diva East',
       addressRegion: 'Maharashtra',
+      postalCode: '400612',
       addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 19.2183,
+      longitude: 73.0455,
     },
     telephone: '+918318228028',
     url: baseUrl,
+    priceRange: '₹₹',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Mumbai' },
+      { '@type': 'City', name: 'Thane' },
+      { '@type': 'City', name: 'Dombivli' },
+      { '@type': 'City', name: 'Kalyan' },
+      { '@type': 'City', name: 'Diva' },
+    ],
+    sameAs: [],
   };
 
   return (

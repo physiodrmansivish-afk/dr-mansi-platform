@@ -55,10 +55,10 @@ export default function AboutBio() {
             </h2>
             <div className="mt-2 h-0.5 w-12 bg-primary" />
 
-            <p className="mt-6 text-sm leading-relaxed text-text-secondary sm:text-base">
+            <p className="mt-6 text-base leading-relaxed text-text-secondary">
               {t('bio1')}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-text-secondary sm:text-base">
+            <p className="mt-4 text-base leading-relaxed text-text-secondary">
               {t('bio2')}
             </p>
           </div>
