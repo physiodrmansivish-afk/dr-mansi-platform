@@ -87,36 +87,38 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Right Floating Media Bubbles */}
-          <div className="hidden lg:block relative h-[500px] w-full">
-            <MediaBubble 
-              src="/media/images/work-1.jpeg" 
-              type="image" 
-              size={200} 
-              className="absolute top-10 right-20"
-              delay={0}
-            />
-            <MediaBubble 
-              src="/media/videos/video-1.mp4" 
-              type="video" 
-              size={140} 
-              className="absolute top-32 left-10"
-              delay={1}
-            />
-            <MediaBubble 
-              src="/media/images/work-2.jpeg" 
-              type="image" 
-              size={160} 
-              className="absolute bottom-20 right-40"
-              delay={2}
-            />
-             <MediaBubble 
-              src="/media/images/work-3.jpeg" 
-              type="image" 
-              size={120} 
-              className="absolute bottom-10 left-32"
-              delay={1.5}
-            />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+          <div className="relative flex h-[350px] w-full items-center justify-center mt-8 sm:h-[450px] lg:mt-0 lg:h-[500px] lg:block">
+            <div className="relative h-[500px] w-full max-w-[500px] origin-center scale-[0.65] sm:scale-75 md:scale-90 lg:scale-100 lg:max-w-none">
+              <MediaBubble 
+                src="/media/images/work-1.jpeg" 
+                type="image" 
+                size={200} 
+                className="absolute top-10 right-20"
+                delay={0}
+              />
+              <MediaBubble 
+                src="/media/videos/video-1.mp4" 
+                type="video" 
+                size={140} 
+                className="absolute top-32 left-10"
+                delay={1}
+              />
+              <MediaBubble 
+                src="/media/images/work-2.jpeg" 
+                type="image" 
+                size={160} 
+                className="absolute bottom-20 right-40"
+                delay={2}
+              />
+               <MediaBubble 
+                src="/media/images/work-3.jpeg" 
+                type="image" 
+                size={120} 
+                className="absolute bottom-10 left-32"
+                delay={1.5}
+              />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+            </div>
           </div>
 
         </div>
