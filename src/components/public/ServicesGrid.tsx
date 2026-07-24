@@ -44,6 +44,20 @@ export default function ServicesGrid() {
                   <p className="mb-4 text-base leading-relaxed text-text-secondary">
                     {t(`items.${key}.description`)}
                   </p>
+
+                  {/* Conditions List */}
+                  <ul className="mb-6 space-y-2">
+                    {(t.raw(`items.${key}.conditions`) as string[]).map((condition, i) => (
+                      <li key={i} className="flex items-start text-sm text-text-secondary">
+                        <span className="mr-2 mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <span>{condition}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div>

@@ -137,33 +137,64 @@
     "items": {
       "ortho": {
         "title": "Orthopaedic Physiotherapy",
-        "description": "Expert care for bone and joint conditions, focusing on pain relief and mobility improvement through evidence-based...",
-        "price": "Starting from ₹800 per session"
+        "description": "Expert care for bone and joint conditions, focusing on pain relief and mobility improvement.",
+        "price": "Starting from ₹800 per session",
+        "conditions": [
+          "Arthritic Pain & Stiffness",
+          "Joint Swelling & Pain",
+          "Back Pain",
+          "Slip Disk",
+          "Neck Pain",
+          "Diabetic Shoulder"
+        ]
       },
       "postSurgery": {
         "title": "Post-Surgery Rehabilitation",
-        "description": "Specialized recovery programs to help you regain strength, flexibility, and full function after surgical procedures and...",
-        "price": "Starting from ₹1000 per session"
+        "description": "Specialized recovery programs to help you regain strength, flexibility, and full function after surgical procedures.",
+        "price": "Starting from ₹1000 per session",
+        "conditions": [
+          "Post Surgery Stiffness",
+          "Post Fracture Stiffness",
+          "Contracture"
+        ]
       },
       "sports": {
         "title": "Sports Injury Treatment",
-        "description": "Expert assessment and treatment for sports-related injuries to get you back to your peak performance safely and...",
-        "price": "Starting from ₹900 per session"
+        "description": "Expert assessment and treatment for sports-related injuries to get you back to your peak performance safely.",
+        "price": "Starting from ₹900 per session",
+        "conditions": [
+          "Ligament Sprain",
+          "Muscle Pull / Soreness"
+        ]
       },
       "neuro": {
         "title": "Neurological Physiotherapy",
-        "description": "Dedicated care for conditions like stroke, Parkinson's, or multiple sclerosis to improve motor functions and neurologic...",
-        "price": "Starting from ₹1100 per session"
+        "description": "Dedicated care for conditions like stroke, Parkinson's, or multiple sclerosis to improve motor functions.",
+        "price": "Starting from ₹1100 per session",
+        "conditions": [
+          "Paralysis / Stroke",
+          "Cerebral Palsy",
+          "Bells Palsy",
+          "Sciatica"
+        ]
       },
       "elderly": {
         "title": "Elderly Care & Mobility",
-        "description": "Gentle, home-based therapy designed to improve balance, strength, and independence for seniors in a...",
-        "price": "Starting from ₹850 per session"
+        "description": "Gentle, home-based therapy designed to improve balance, strength, and independence for seniors.",
+        "price": "Starting from ₹850 per session",
+        "conditions": [
+          "Muscle Weakness",
+          "General Ageing Issues"
+        ]
       },
       "chronic": {
         "title": "Chronic Pain Management",
-        "description": "Integrated approaches to manage long-term pain through manual therapy, exercise science, and educational patie...",
-        "price": "Starting from ₹950 per session"
+        "description": "Integrated approaches to manage long-term pain through manual therapy, exercise science, and education.",
+        "price": "Starting from ₹950 per session",
+        "conditions": [
+          "Persistent Joint Pain",
+          "Long-term Back Ache"
+        ]
       }
     }
   },
