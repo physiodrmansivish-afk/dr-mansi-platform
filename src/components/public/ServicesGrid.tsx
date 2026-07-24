@@ -61,11 +61,6 @@ export default function ServicesGrid() {
                 </div>
 
                 <div>
-                  {/* Price/Duration */}
-                  <p className="mb-5 text-sm font-medium text-primary">
-                    {t(`items.${key}.price`)}
-                  </p>
-
                   {/* Book Now Button */}
                   <Link
                     href={`/${locale}/book?service=${key}`}
