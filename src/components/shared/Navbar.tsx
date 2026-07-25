@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -42,8 +43,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href={`/${locale}`}
-          className="text-xl font-bold text-primary"
+          className="flex items-center gap-2 text-xl font-bold text-primary"
         >
+          <Image src="/logo.jpeg" alt="PhysioMansi Logo" width={32} height={32} className="rounded-full object-cover" />
           PhysioMansi
         </Link>
 
