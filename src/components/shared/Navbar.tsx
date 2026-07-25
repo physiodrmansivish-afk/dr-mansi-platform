@@ -44,7 +44,7 @@ export default function Navbar() {
           href={`/${locale}`}
           className="text-xl font-bold text-primary"
         >
-          PhysioCare
+          physiomansi
         </Link>
 
         {/* Desktop Navigation */}
