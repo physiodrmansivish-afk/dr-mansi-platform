@@ -23,7 +23,7 @@ interface PatientsModuleProps {
 const areaOptions = [
   'Diva', 'Diva East', 'Kopar', 'Dombivli', 'Thakurli',
   'Kalyan', 'Vithalwadi', 'Ulhasnagar', 'Ambernath', 'Badlapur',
-  'Titwala', 'Mumbra', 'Thane', 'Mulund', 'Bhandup',
+  'Mumbra', 'Thane', 'Mulund', 'Bhandup',
   'Kanjurmarg', 'Vikhroli', 'Ghatkopar', 'Powai',
 ];
 

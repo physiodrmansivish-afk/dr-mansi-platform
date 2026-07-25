@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Bone, HeartPulse, Activity } from 'lucide-react';
+import { Bone, HeartPulse, Activity, ArrowRight } from 'lucide-react';
 
 const serviceIcons = [Bone, HeartPulse, Activity] as const;
 const serviceKeys = ['ortho', 'postSurgery', 'sports'] as const;
@@ -57,6 +57,17 @@ export default function ServicesSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* See All Services CTA */}
+        <div className="mt-10 text-center">
+          <Link
+            href={`/${locale}/services`}
+            className="group inline-flex items-center gap-2 rounded-btn bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-primary-hover hover:shadow-lg"
+          >
+            {t('seeAll')}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>

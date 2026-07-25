@@ -50,7 +50,8 @@
           "description": "Expert assessment and treatment for sports-related injuries to get you back to your peak performance."
         }
       },
-      "learnMore": "Learn More"
+      "learnMore": "Learn More",
+      "seeAll": "See All Services"
     },
     "whyChoose": {
       "title": "Why Choose Us",
@@ -104,7 +105,7 @@
     "email": "mansi.vishwakarma8@gmail.com",
     "whatsapp": "WhatsApp Us",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© {year} Physiomansi. All rights reserved."
+    "copyright": "© {year} PhysioMansi. All rights reserved."
   },
   "about": {
     "heroTitle": "Dedicated to Your Mobility",
@@ -213,7 +214,6 @@
       "ulhasnagar": "Ulhasnagar",
       "ambernath": "Ambernath",
       "badlapur": "Badlapur",
-      "titwala": "Titwala",
       "mumbra": "Mumbra",
       "thane": "Thane",
       "mulund": "Mulund",
@@ -312,7 +312,7 @@
     "defaultTitle": "Dr. Mansi Vishwakarma | Physiotherapist in Diva, Thane & Mumbai",
     "titleTemplate": "%s | Dr. Mansi Vishwakarma - Physiotherapist Diva, Thane & Mumbai",
     "description": "Expert home-visit physiotherapy in Diva, Dombivli, Kalyan, Thane, Vikhroli & Mumbai. Personalized orthopedic rehabilitation, post-surgery recovery, sports injury treatment & pain management by Dr. Mansi Vishwakarma (BPT, MPT Ortho).",
-    "siteName": "Dr. Mansi Vishwakarma - Physiomansi",
+    "siteName": "Dr. Mansi Vishwakarma - PhysioMansi",
     "aboutTitle": "About Dr. Mansi Vishwakarma | Physiotherapist in Diva, Thane & Mumbai",
     "aboutDescription": "Dr. Mansi Vishwakarma — BPT, MPT (Ortho) qualified Consultant Physiotherapist serving Diva, Dombivli, Kalyan, Thane, Vikhroli & Mumbai with 7+ years of experience in orthopedic rehabilitation, spine & knee care.",
     "servicesTitle": "Physiotherapy Services in Diva, Thane & Mumbai | Dombivli, Kalyan, Vikhroli",

@@ -10,7 +10,7 @@ const serviceKeys = ['ortho', 'postSurgery', 'sports', 'neuro', 'elderly', 'chro
 const areaKeys = [
   'diva', 'divaEast', 'kopar', 'dombivli', 'thakurli',
   'kalyan', 'vithalwadi', 'ulhasnagar', 'ambernath', 'badlapur',
-  'titwala', 'mumbra', 'thane', 'mulund', 'bhandup',
+  'mumbra', 'thane', 'mulund', 'bhandup',
   'kanjurmarg', 'vikhroli', 'ghatkopar', 'powai',
 ];
 

@@ -97,7 +97,6 @@ export default async function LocaleLayout({
       { '@type': 'Neighborhood', name: 'Ulhasnagar' },
       { '@type': 'Neighborhood', name: 'Ambernath' },
       { '@type': 'Neighborhood', name: 'Badlapur' },
-      { '@type': 'Neighborhood', name: 'Titwala' },
       { '@type': 'Neighborhood', name: 'Mumbra' },
       { '@type': 'Neighborhood', name: 'Mulund' },
       { '@type': 'Neighborhood', name: 'Bhandup' },

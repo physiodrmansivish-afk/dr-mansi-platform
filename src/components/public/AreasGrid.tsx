@@ -13,7 +13,6 @@ const localitiesKeys = [
   'ulhasnagar',
   'ambernath',
   'badlapur',
-  'titwala',
   'mumbra',
   'thane',
   'mulund',
