@@ -45,7 +45,7 @@ export default function Navbar() {
           href={`/${locale}`}
           className="flex items-center gap-2 text-xl font-bold text-primary"
         >
-          <Image src="/logo.jpeg" alt="PhysioMansi Logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover shadow-sm border border-border/50" />
+          <Image src="/logo.svg" alt="PhysioMansi Logo" width={40} height={40} className="h-10 w-auto" />
           PhysioMansi
         </Link>
 
