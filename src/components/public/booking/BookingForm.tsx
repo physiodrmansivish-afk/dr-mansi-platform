@@ -8,9 +8,10 @@ import { Loader2, Send, User, Phone, MapPin, Stethoscope, FileText } from 'lucid
 
 const serviceKeys = ['ortho', 'postSurgery', 'sports', 'neuro', 'elderly', 'chronic'];
 const areaKeys = [
-  'dharampeth', 'sitabuldi', 'ramdaspeth', 'civilLines',
-  'bajajNagar', 'pratapNagar', 'manishNagar', 'shankarNagar',
-  'hingna', 'wardhaRoad', 'katolRoad', 'amravatiRoad',
+  'diva', 'divaEast', 'kopar', 'dombivli', 'thakurli',
+  'kalyan', 'vithalwadi', 'ulhasnagar', 'ambernath', 'badlapur',
+  'titwala', 'mumbra', 'thane', 'mulund', 'bhandup',
+  'kanjurmarg', 'vikhroli', 'ghatkopar', 'powai',
 ];
 
 export default function BookingForm() {

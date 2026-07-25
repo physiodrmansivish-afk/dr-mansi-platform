@@ -3,18 +3,25 @@ import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 
 const localitiesKeys = [
-  'dharampeth',
-  'sitabuldi',
-  'ramdaspeth',
-  'civilLines',
-  'bajajNagar',
-  'pratapNagar',
-  'manishNagar',
-  'shankarNagar',
-  'hingna',
-  'wardhaRoad',
-  'katolRoad',
-  'amravatiRoad',
+  'diva',
+  'divaEast',
+  'kopar',
+  'dombivli',
+  'thakurli',
+  'kalyan',
+  'vithalwadi',
+  'ulhasnagar',
+  'ambernath',
+  'badlapur',
+  'titwala',
+  'mumbra',
+  'thane',
+  'mulund',
+  'bhandup',
+  'kanjurmarg',
+  'vikhroli',
+  'ghatkopar',
+  'powai',
 ] as const;
 
 export default function AreasGrid() {
@@ -31,7 +38,7 @@ export default function AreasGrid() {
           </div>
           <div>
             <h2 className="text-xl font-bold text-primary sm:text-2xl">
-              {t('allNagpur')}
+              {t('allMumbaiThane')}
             </h2>
           </div>
         </div>

@@ -21,9 +21,10 @@ interface PatientsModuleProps {
 }
 
 const areaOptions = [
-  'Dharampeth', 'Sitabuldi', 'Ramdaspeth', 'Civil Lines',
-  'Bajaj Nagar', 'Pratap Nagar', 'Manish Nagar', 'Shankar Nagar',
-  'Hingna', 'Wardha Road', 'Katol Road', 'Amravati Road',
+  'Diva', 'Diva East', 'Kopar', 'Dombivli', 'Thakurli',
+  'Kalyan', 'Vithalwadi', 'Ulhasnagar', 'Ambernath', 'Badlapur',
+  'Titwala', 'Mumbra', 'Thane', 'Mulund', 'Bhandup',
+  'Kanjurmarg', 'Vikhroli', 'Ghatkopar', 'Powai',
 ];
 
 export default function PatientsModule({ initialPatients }: PatientsModuleProps) {
