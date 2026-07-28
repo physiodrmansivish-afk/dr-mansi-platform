@@ -4,10 +4,19 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
+import { Inter } from 'next/font/google';
 
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
 type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -111,8 +120,8 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale}>
-      <body className="flex min-h-screen flex-col">
+    <html lang={locale} className={inter.variable}>
+      <body className={`flex min-h-screen flex-col ${inter.className}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="flex-1">{children}</main>

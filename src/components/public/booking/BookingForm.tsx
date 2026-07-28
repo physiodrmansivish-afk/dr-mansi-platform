@@ -1,10 +1,11 @@
 'use client';
 
 import { useBooking, InquiryFormData } from './BookingContext';
-import BookingSuccess from './BookingSuccess';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { Loader2, Send, User, Phone, MapPin, Stethoscope, FileText } from 'lucide-react';
+
+const BookingSuccess = lazy(() => import('./BookingSuccess'));
 
 const serviceKeys = ['ortho', 'postSurgery', 'sports', 'neuro', 'elderly', 'chronic'];
 const areaKeys = [
@@ -24,7 +25,15 @@ export default function BookingForm() {
   const { register, handleSubmit, formState: { errors } } = form;
 
   if (isSubmitted) {
-    return <BookingSuccess />;
+    return (
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-16">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      }>
+        <BookingSuccess />
+      </Suspense>
+    );
   }
 
   const onSubmit = async (data: InquiryFormData) => {
