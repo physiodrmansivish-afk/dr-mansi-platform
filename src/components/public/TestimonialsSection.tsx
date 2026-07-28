@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { Star, Play, Quote } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 import MediaLightbox from '../shared/MediaLightbox';
 
@@ -16,13 +15,7 @@ export default function TestimonialsSection() {
     <section className="bg-surface-dark py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center animate-[fadeUp_0.6s_ease-out_both]">
           <h2 className="text-2xl font-bold text-text-on-dark sm:text-3xl lg:text-4xl">
             {t('title')}
           </h2>
@@ -30,18 +23,12 @@ export default function TestimonialsSection() {
           <p className="mx-auto mt-3 max-w-lg text-base text-text-on-dark-muted sm:text-lg">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </div>
 
         <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 lg:items-center">
           
           {/* Video Testimonial */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative animate-[fadeInLeft_0.6s_ease-out_0.2s_both]">
             <div 
               className="relative aspect-[4/5] sm:aspect-video w-full overflow-hidden rounded-2xl cursor-pointer group shadow-2xl"
               onClick={() => setIsVideoOpen(true)}
@@ -53,6 +40,7 @@ export default function TestimonialsSection() {
                 playsInline
                 loop
                 autoPlay
+                preload="metadata"
               />
               <div className="absolute inset-0 bg-black/30 transition-opacity group-hover:bg-black/40" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -63,16 +51,10 @@ export default function TestimonialsSection() {
             </div>
             {/* Decoration */}
             <div className="absolute -left-4 -bottom-4 -z-10 h-32 w-32 rounded-full bg-primary/20 blur-2xl"></div>
-          </motion.div>
+          </div>
 
           {/* Text Testimonials */}
-          <motion.div 
-            className="flex flex-col gap-6"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          <div className="flex flex-col gap-6 animate-[fadeInRight_0.6s_ease-out_0.4s_both]">
             {testimonialKeys.map((key) => (
               <div
                 key={key}
@@ -102,7 +84,7 @@ export default function TestimonialsSection() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 

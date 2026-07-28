@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Phone } from 'lucide-react';
 
 export default function HeroSection() {
@@ -15,19 +15,19 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           
           {/* Professional Photo — shows first on mobile for trust */}
-          <motion.div 
-            className="order-1 lg:order-2 flex justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <div 
+            className="order-1 lg:order-2 flex justify-center animate-[fadeScale_0.6s_ease-out_both]"
           >
             <div className="relative">
               {/* Main photo */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl w-[280px] h-[350px] sm:w-[340px] sm:h-[420px] lg:w-[400px] lg:h-[500px]">
-                <img
+                <Image
                   src="/media/images/work-2.jpeg"
                   alt="Dr. Mansi Vishwakarma - Consultant Physiotherapist"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, 400px"
+                  className="object-cover"
+                  priority
                 />
                 {/* Subtle gradient overlay at bottom */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
@@ -40,14 +40,11 @@ export default function HeroSection() {
               <div className="absolute -top-3 -right-3 h-full w-full rounded-2xl border-2 border-primary/20 -z-10" />
               <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-primary/10 blur-2xl -z-10" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Text Content */}
-          <motion.div 
-            className="order-2 lg:order-1 max-w-xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div 
+            className="order-2 lg:order-1 max-w-xl animate-[fadeUp_0.6s_ease-out_0.2s_both]"
           >
             {/* Headline */}
             <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text-primary sm:text-4xl lg:text-5xl xl:text-6xl">
@@ -102,7 +99,7 @@ export default function HeroSection() {
                 {t('ctaSecondary')}
               </a>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 
 export default function CtaSection() {
@@ -12,12 +11,7 @@ export default function CtaSection() {
   return (
     <section className="bg-primary py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="animate-[fadeUp_0.6s_ease-out_both]">
           <h2 className="text-2xl font-bold text-text-on-dark sm:text-3xl lg:text-4xl">
             {t('title')}
           </h2>
@@ -41,7 +35,7 @@ export default function CtaSection() {
               {t('whatsapp')}
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

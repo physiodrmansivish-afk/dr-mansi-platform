@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 import MediaLightbox from '../shared/MediaLightbox';
 
 interface GalleryItem {
@@ -63,13 +62,7 @@ export default function WorkGallerySection() {
     <section className="bg-surface py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <motion.div
-          className="text-center mb-10 sm:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center mb-10 sm:mb-12 animate-[fadeUp_0.5s_ease-out_both]">
           <h2 className="text-2xl font-bold text-text-primary sm:text-3xl">
             {t('title')}
           </h2>
@@ -77,7 +70,7 @@ export default function WorkGallerySection() {
           <p className="mx-auto mt-3 max-w-lg text-base text-text-muted">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </div>
 
         {/* Carousel Container */}
         <div 
@@ -107,14 +100,10 @@ export default function WorkGallerySection() {
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide"
           >
-            {galleryItems.map((item, index) => (
-              <motion.div
+            {galleryItems.map((item) => (
+              <div
                 key={item.src}
                 className="shrink-0 w-[260px] snap-center sm:snap-start"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
               >
                 <button
                   type="button"
@@ -135,7 +124,7 @@ export default function WorkGallerySection() {
                         className="h-full w-full object-cover opacity-80"
                         muted
                         playsInline
-                        preload="metadata"
+                        preload="none"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30">
                         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-white shadow-lg transition-transform group-hover:scale-110">
@@ -145,7 +134,7 @@ export default function WorkGallerySection() {
                     </div>
                   )}
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
